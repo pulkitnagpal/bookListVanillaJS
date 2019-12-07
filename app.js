@@ -31,9 +31,19 @@ function addBook(book){
             <td>${book.title}</td>
             <td>${book.author}</td>
             <td>${book.isbn}</td>
-            <td><a href="#" class="btn btn-danger">X</a></td>
+            <td><a href="#" class="btn btn-danger delete">X</a></td>
     `;
     list.appendChild(row);
+}
+function deleteRow(row){
+    if (row.classList.contains('delete')){
+        row.parentElement.parentElement.remove();
+    }
+}
+function clearFields(){
+    document.querySelector("#title").value = "";
+    document.querySelector("#author").value = "";
+    document.querySelector("#isbn").value = ""
 }
 document.addEventListener('DOMContentLoaded', ()=> {
     displayBooks();
@@ -47,5 +57,11 @@ document.addEventListener('DOMContentLoaded', ()=> {
         const isbn = document.querySelector("#isbn").value;
         const newBook = new book(title, author, isbn);
         addBook(newBook);
+        clearFields();
     })
+    const list = document.querySelector("#book-list");
+    list.addEventListener("click", (e)=> {
+        deleteRow(e.target)
+    })
+    
 })
