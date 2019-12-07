@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Booklist app</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://kit.fontawesome.com/3cc5440daf.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./bootstrap.min.css"/>
+        <link rel="stylesheet" href="./mystyles.css"/>
+    </head>
+    <body>
+        <div class="container mt-4">
+            <h1 class="text-center"><i class="fas fa-book-open text-primary"></i> My<span class="text-primary">Book</span>List</h1>
+            <div class="form-container">
+                <form id="book-form">
+                    <div class="form-group">
+                        <label for="title" class="text-capitalize">Title</label>
+                        <input type="text" class="form-control" id="title"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="author" class="text-capitalize">Author</label>
+                        <input type="text" class="form-control" id="author"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="isbn" class="text-capitalize">ISBN#</label>
+                        <input type="text" class="form-control" id="isbn"/>
+                    </div>
+                    <input type="submit" value="Add" class="btn btn-primary btn-block"/>
+                </form>
+                <table class="table table-striped mt-5">
+                    <thead>
+                        <tr>
+                            <th>
+                                Title
+                            </th>
+                            <th>
+                                Author
+                            </th>
+                            <th>
+                                ISBN
+                            </th>
+                            <th>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="book-list">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+       
+    </body>
+    <script src="./app.js"></script>
+</html>
